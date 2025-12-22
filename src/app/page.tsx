@@ -6,10 +6,14 @@ import { PortfolioClient } from "@/components/PortfolioClient";
 
 export default async function HomePage() {
 
-  const res = await fetch(
-    "/api/portfolio",
-    { cache: "no-store" }
-  );
+  const baseUrl =
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000";
+
+  const res = await fetch(`${baseUrl}/api/portfolio`, {
+    cache: "no-store",
+  });
 
   const data = await res.json();
 
