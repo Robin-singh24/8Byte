@@ -1,7 +1,8 @@
 import { SectorData, StockDetails } from "../types";
 
 export function aggregateBySector(
-  stocks: StockDetails[]
+  stocks: StockDetails[],
+  totalPresentValue: number
 ): SectorData[] {
   const sectorMap = new Map<string, SectorData>();
 
