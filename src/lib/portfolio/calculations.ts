@@ -24,7 +24,7 @@ export function calcutateStockValue(
     }
 }
 
-export function calcTotalPortfolioValue(
+export function calcTotalPortfolioTotalValue(
     stocks: StockDetails[]
 ) {
     const totalInvestment = stocks.reduce(

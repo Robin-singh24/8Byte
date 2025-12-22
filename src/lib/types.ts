@@ -8,28 +8,35 @@ export type PortfolioStock = {
 };
 
 export type MarketData = {
-  cmp: number | null;
-  peRatio: number | null;
-  latestEarnings: number | null;
-  source: "mock" | "live";
+    cmp: number | null;
+    peRatio: number | null;
+    latestEarnings: number | null;
+    source: "mock" | "live";
 };
 
 export type StockDetails = {
-  name: string;
-  symbol: string;
-  exchange: string;
-  sector: string;
+    name: string;
+    symbol: string;
+    exchange: string;
+    sector: string;
 
-  purchasePrice: number;
-  quantity: number;
+    purchasePrice: number;
+    quantity: number;
 
-  cmp: number | null;
-  peRatio: number | null;
-  latestEarnings: number | null;
+    cmp: number | null;
+    peRatio: number | null;
+    latestEarnings: number | null;
 
-  investment: number;
-  presentValue: number | null;
-  gainLoss: number | null;
-  gainLossPercent: number | null;
-  portfolioPercentage: number | null;
+    investment: number;
+    presentValue: number | null;
+    gainLoss: number | null;
+    gainLossPercent: number | null;
+    portfolioPercentage: number | null;
+};
+
+export type CurrentMarketData = {
+    cmp: number | null;
+    peRatio: number | null;
+    latestEarnings: number | null;
+    source: "mock" | "yahoo";
 };
