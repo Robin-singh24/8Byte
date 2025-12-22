@@ -1,4 +1,4 @@
-
+import { cookies } from "next/headers";
 import { HoldingsTable } from "@/components/HoldingsTable";
 import { PortfolioSummary } from "@/components/PortfolioTable";
 import { SectorAllocation } from "@/components/SectorAllocation";
@@ -10,8 +10,13 @@ export default async function HomePage() {
       ? `https://${process.env.VERCEL_URL}`
       : "http://localhost:3000";
 
+  const cookieStore = cookies();
+
   const res = await fetch(`${baseUrl}/api/portfolio`, {
     cache: "no-store",
+    headers: {
+      Cookie: cookieStore.toString(),
+    },
   });
 
   if (!res.ok) {
