@@ -7,7 +7,7 @@ import { PortfolioClient } from "@/components/PortfolioClient";
 export default async function HomePage() {
 
   const res = await fetch(
-    "http://localhost:3001/api/portfolio",
+    "/api/portfolio",
     { cache: "no-store" }
   );
 
