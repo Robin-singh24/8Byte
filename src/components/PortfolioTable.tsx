@@ -1,3 +1,4 @@
+"use client"
 import { formatCurrency, formatPercent } from "@/lib/ui/format";
 
 export function PortfolioSummary({ totals }: any) {

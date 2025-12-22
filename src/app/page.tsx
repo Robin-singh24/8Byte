@@ -1,3 +1,4 @@
+
 import { HoldingsTable } from "@/components/HoldingsTable";
 import { PortfolioSummary } from "@/components/PortfolioTable";
 import { SectorAllocation } from "@/components/SectorAllocation";
