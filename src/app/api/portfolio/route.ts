@@ -6,6 +6,7 @@ import {
     calcTotalPortfolioTotalValue,
     computePortfolioPercentage
 } from "@/lib/portfolio/calculations";
+import { aggregateBySector } from "@/lib/portfolio/sectorAggregation";
 
 export async function GET() {
     try {
@@ -29,6 +30,11 @@ export async function GET() {
             total.totalPresentValue
         );
 
+        const sectors = aggregateBySector(
+            finalStocks,
+            total.totalPresentValue
+        );
+
         return NextResponse.json({
             updatedAt: new Date().toISOString(),
             totals: {
@@ -41,6 +47,7 @@ export async function GET() {
                         total.totalInvestment) *
                     100,
             },
+            sectors,
             stocks: finalStocks,
         });
     } catch (error) {

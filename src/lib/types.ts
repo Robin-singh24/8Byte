@@ -37,7 +37,7 @@ export type StockDetails = {
 export type SectorData = {
     sector: string,
     investment: number,
-    persentValue: number,
+    presentValue: number,
     gainLoss: number,
     gainLossPercent: number;
     allocationPercent: number;
