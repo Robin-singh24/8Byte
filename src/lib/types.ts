@@ -11,7 +11,7 @@ export type MarketData = {
     cmp: number | null;
     peRatio: number | null;
     latestEarnings: number | null;
-    source: "mock" | "live";
+    source: "mock" | "yahoo";
 };
 
 export type StockDetails = {
@@ -34,9 +34,11 @@ export type StockDetails = {
     portfolioPercentage: number | null;
 };
 
-export type CurrentMarketData = {
-    cmp: number | null;
-    peRatio: number | null;
-    latestEarnings: number | null;
-    source: "mock" | "yahoo";
+export type SectorData = {
+    sector: string,
+    investment: number,
+    persentValue: number,
+    gainLoss: number,
+    gainLossPercent: number;
+    allocationPercent: number;
 };
